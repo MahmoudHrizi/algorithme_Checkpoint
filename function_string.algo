@@ -1,0 +1,24 @@
+ALGORITHM function_Sentence
+VAR
+    sentence : STRING;
+    caracter:CHAR;
+    nbVowels,sentlength,i :INTEGER;
+    nbWord:=1;
+BEGIN
+REPEAT
+    write("please enter the caracter");
+    read(caracter);
+    sentence:=sentence+caracter;
+UNTIL (caracter='.');
+    FOR i FROM 0 TO length(sentence)-1 STEP step  DO
+        IF (sentence[i]=' ') THEN
+            nbWord:=nbWord+1;
+        END_IF
+        IF (sentence[i]='a' OR sentence[i]='e' OR sentence[i]='i' 
+            OR sentence[i]='o' OR sentence[i]='u' ORsentence[i]='y'  ) THEN
+            nbVowels:=nbVowels+1;
+        END_IF
+    END_FOR
+    write("the length of",sentence,"is",sentlenght,"the number of word is ",nbWord,"and the number of vowels is",nbVowels);
+    l
+END
